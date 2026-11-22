@@ -113,19 +113,27 @@ app.use((req, res) => {
   res.status(404).send("Página não encontrada.");
 });
 
+
 app.use((error, req, res, _next) => {
+  console.error(`Erro em ${req.method} ${req.path}:`, error);
+
   if (error?.name === "MulterError") {
     const message = error.code === "LIMIT_FILE_SIZE"
       ? "A foto precisa ter até 5 MB."
       : "Não foi possível receber essa foto.";
+
     return res.status(400).json({ error: message });
   }
-  console.error(`Falha ao atender ${req.method} ${req.path}.`);
+
   if (req.path.startsWith("/api/")) {
-    return res.status(500).json({ error: "Não foi possível concluir a solicitação. Tente novamente." });
+    return res.status(500).json({
+      error: "Não foi possível concluir a solicitação."
+    });
   }
+
   res.status(500).send("Não foi possível abrir esta página.");
 });
+
 
 const server = app.listen(port, "0.0.0.0", () => {
   console.log(`Fui Lá Excursões disponível na porta ${port}.`);
