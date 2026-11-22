@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta name="description" content="Fui Lá - Excursões | Pacotes turísticos com os melhores destinos" />
+  <title>Fui Lá - Excursões</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo-link" aria-label="Fui Lá Excursões">
+        <img src="images/logo.png" alt="Fui Lá Excursões" class="logo" />
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="#destinos" class="nav-link">Pacotes</a>
+        <a href="#destinos" class="nav-link">Destinos</a>
+        <a href="#grupo-vip" class="nav-link">Promoções</a>
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#contato" class="nav-link">Contato</a>
+      </nav>
+
+      <button type="button" class="btn btn-accent btn-pill" data-action="open-search">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        Buscar pacotes
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-pattern"></div>
+        <div class="hero-overlay-primary"></div>
+        <div class="hero-overlay-dark"></div>
+      </div>
+      <div class="container hero-content">
+        <h1 class="hero-title">
+          Pacotes turísticos com os <br class="hide-mobile" />
+          <span class="text-accent">melhores destinos</span>
+        </h1>
+        <p class="hero-subtitle">
+          A sua próxima viagem está a apenas alguns cliques de distância. Encontre ofertas imperdíveis e parcele em até 12x sem juros!
+        </p>
+        <button type="button" class="btn btn-accent btn-pill btn-xl" data-action="open-search">
+          <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          Buscar pacotes
+        </button>
+      </div>
+    </section>
+
+    <!-- DESTINATIONS -->
+    <section id="destinos" class="section section-light">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Ofertas <span class="text-accent">imperdíveis</span></h2>
+          <p class="section-subtitle">
+            Confira nossas próximas excursões pelos melhores destinos do Brasil. Garanta sua vaga e parcele em até 12x no cartão!
+          </p>
+        </div>
+        <div class="grid-cards" id="destinations-grid"></div>
+      </div>
+    </section>
+
+    <!-- VIP GROUP -->
+    <section id="grupo-vip" class="section section-vip">
+      <div class="container">
+        <div class="vip-card">
+          <div class="vip-row">
+            <div class="vip-icon-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+            </div>
+            <div class="vip-text">
+              <span class="vip-eyebrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+                Grupo VIP
+              </span>
+              <h2 class="vip-title">Promoções em primeira mão no WhatsApp</h2>
+              <p class="vip-subtitle">
+                Entre no nosso grupo VIP e receba descontos exclusivos, vagas de última hora e novas datas antes de todo mundo.
+              </p>
+              <a href="https://chat.whatsapp.com/FG8GPC7aX2A0FBoJkS2ZVD" target="_blank" rel="noopener noreferrer" class="btn btn-vip">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                Entrar no grupo VIP
+              </a>
+            </div>
+          </div>
+
+          <div class="vip-perks vip-perks-single">
+            <div class="vip-perk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/></svg>
+              <span>Avisos de vagas em primeira mão</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST -->
+    <section id="sobre" class="section section-primary">
+      <div class="trust-decor decor-tr" aria-hidden="true"></div>
+      <div class="trust-decor decor-bl" aria-hidden="true"></div>
+      <div class="container trust-inner">
+        <div class="section-header">
+          <h2 class="section-title text-white">Por que escolher a Fui Lá?</h2>
+          <p class="section-subtitle text-white-soft">
+            Mais de 1000 clientes já viajaram conosco e comprovaram a qualidade dos nossos serviços.
+          </p>
+        </div>
+        <div class="grid-benefits">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+            </div>
+            <h3>Parcele em até 12x</h3>
+            <p>Sem juros no cartão de crédito para todos os pacotes.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h3>Compra Segura</h3>
+            <p>Ambiente 100% seguro. Seus dados estão protegidos.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3>Flexibilidade de Cancelamento</h3>
+            <p>Flexibilidade para mudar os planos em pacotes selecionados.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001z"/></svg>
+            </div>
+            <h3>Atendimento 24h</h3>
+            <p>Suporte dedicado via WhatsApp antes, durante e após a viagem.</p>
+          </div>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat">
+            <div class="stat-value">+5</div>
+            <div class="stat-label">Destinos Exclusivos</div>
+            <div class="stat-sublabel">para esse ano</div>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <div class="stat-value">+1000</div>
+            <div class="stat-label">Clientes Felizes</div>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <div class="stat-value">3</div>
+            <div class="stat-label">Anos de Experiência</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contato" class="section section-contact">
+      <div class="container">
+        <div class="section-header narrow">
+          <span class="badge-pill">Fale com a gente</span>
+          <h2 class="section-title">Vamos planejar a sua próxima viagem?</h2>
+          <p class="section-subtitle">
+            Tire suas dúvidas, peça uma cotação personalizada ou venha tomar um café com a gente.
+            Atendemos por WhatsApp, telefone, e-mail e pessoalmente.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-form-card">
+            <h3>Envie sua mensagem</h3>
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-row two-col">
+                <div class="field">
+                  <label for="contact-name">Nome completo</label>
+                  <input id="contact-name" name="name" placeholder="Seu nome" required />
+                </div>
+                <div class="field">
+                  <label for="contact-phone">Telefone / WhatsApp</label>
+                  <input id="contact-phone" name="phone" type="tel" placeholder="(11) 99999-9999" required />
+                </div>
+              </div>
+              <div class="field">
+                <label for="contact-email">E-mail</label>
+                <input id="contact-email" name="email" type="email" placeholder="voce@email.com" required />
+              </div>
+              <div class="field">
+                <label for="contact-subject">Destino de interesse</label>
+                <input id="contact-subject" name="subject" placeholder="Ex.: Gramado, Holambra, Campos do Jordão..." />
+              </div>
+              <div class="field">
+                <label for="contact-message">Sua mensagem</label>
+                <textarea id="contact-message" name="message" placeholder="Conte para nós quando, com quantas pessoas e o que você procura na sua viagem." rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-accent btn-block btn-xl">
+                <span class="btn-text">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                  Enviar
+                </span>
+                <span class="btn-loading hidden">
+                  <svg class="icon spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+                  Enviando...
+                </span>
+              </button>
+            </form>
+          </div>
+
+          <aside class="contact-info-card">
+            <h3>Fale com a gente</h3>
+            <a href="https://api.whatsapp.com/send/?phone=5521976971474&text=Ol%C3%A1%2C+gostaria+de+informa%C3%A7%C3%B5es+sobre+as+excurs%C3%B5es%21" target="_blank" rel="noopener noreferrer" class="contact-item linkable">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+              <div>
+                <p class="contact-item-title">WhatsApp (21) 97697-1474</p>
+                <p class="contact-item-sub">Atendimento rápido — clique para chamar</p>
+              </div>
+            </a>
+            <div class="contact-item">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <div>
+                <p class="contact-item-title">(21) 97697-1474</p>
+                <p class="contact-item-sub">Telefone para reservas e cotações</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <div>
+                <p class="contact-item-title">fuilaexcursoes@gmail.com</p>
+                <p class="contact-item-sub">Resposta em até 2h úteis</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <div>
+                <p class="contact-item-title">Segunda a Sexta · 8h às 18h</p>
+                <p class="contact-item-sub">Sábado e domingo · Fechado</p>
+              </div>
+            </div>
+            <div class="contact-item border-top">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <div>
+                <p class="contact-item-title">CNPJ</p>
+                <p class="contact-item-sub">56.002.390/0001-93</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#top" class="logo-link">
+            <img src="images/logo.png" alt="Fui Lá Excursões" class="logo logo-lg" />
+          </a>
+          <p class="footer-about">
+            A agência de viagens que conecta você aos melhores destinos com os menores preços.
+            Sua próxima aventura começa aqui.
+          </p>
+          <div class="social-row">
+            <a href="https://www.facebook.com/fuilaexcursoes/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/fuilaexcursoes/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=5521976971474&text=Ol%C3%A1%2C+gostaria+de+informa%C3%A7%C3%B5es+sobre+as+excurs%C3%B5es%21" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Contato</h4>
+          <ul class="footer-list footer-contact-list">
+            <li>
+              <svg class="icon icon-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>(21) 97697-1474<br /><span class="muted-sm">Seg a Sex das 8h às 18h</span></span>
+            </li>
+            <li>
+              <svg class="icon icon-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>fuilaexcursoes@gmail.com</span>
+            </li>
+            <li>
+              <svg class="icon icon-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <span>CNPJ<br /><span class="muted-sm">56.002.390/0001-93</span></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="footer-year"></span> 
+          Fui Lá Excursões Todos os direitos reservados.<br>
+          CNPJ 56.002.390/0001-93.
+          <br>
+          <a href="/privacidade">Política de privacidade</a>
+          <br>
+          <br>
+          Site Create By Rhuan Gabriel
+        </p>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SEARCH MODAL -->
+  <div class="modal" id="search-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-action="close-search"></div>
+    <div class="modal-dialog modal-dialog-md" role="dialog" aria-modal="true" aria-labelledby="search-title">
+      <h2 id="search-title" class="sr-only">Buscar excursões</h2>
+      <div class="search-input-wrap">
+        <svg class="icon search-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="search-input" placeholder="Pesquisar" autocomplete="off" />
+      </div>
+      <div class="search-results" id="search-results"></div>
+      <div class="search-more-wrap hidden" id="search-more-wrap">
+        <button type="button" class="btn btn-destructive btn-block" id="search-more-btn">Mostre mais</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHECKOUT MODAL -->
+  <div class="modal" id="checkout-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-action="close-checkout"></div>
+    <div class="modal-dialog modal-dialog-sm" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+      <button type="button" class="modal-close" data-action="close-checkout" aria-label="Fechar">×</button>
+      <header class="checkout-header">
+        <h2 id="checkout-title">Comprar pacote</h2>
+        <p id="checkout-subtitle"></p>
+      </header>
+      <div id="checkout-body"></div>
+    </div>
+  </div>
+
+  <!-- FLOATING WHATSAPP -->
+  <a
+    href="https://api.whatsapp.com/send/?phone=5521976971474&text=Ol%C3%A1%2C+gostaria+de+informa%C3%A7%C3%B5es+sobre+as+excurs%C3%B5es%21&type=phone_number&app_absent=0"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar pelo WhatsApp"
+    class="floating-whatsapp"
+  >
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>
+    </svg>
+    <span class="floating-whatsapp-text">Fale pelo WhatsApp</span>
+  </a>
+
+  <!-- TOAST -->
+  <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

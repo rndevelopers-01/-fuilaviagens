@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Equipe | Fui Lá Excursões</title>
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/staff.css" />
+</head>
+<body>
+  <div class="staff-shell">
+    <header class="staff-topbar">
+      <a class="staff-brand" href="/" aria-label="Voltar ao site Fui Lá Excursões">
+        <img src="/images/logo.png" alt="" />
+        <span><strong>Fui Lá</strong><small>PAINEL DA EQUIPE</small></span>
+      </a>
+      <div id="staff-account" class="staff-account" hidden>
+        <span id="staff-email"></span>
+        <button type="button" class="button button-quiet" id="logout-button">Sair</button>
+      </div>
+    </header>
+
+    <main class="staff-main">
+      <section id="login-view" class="login-view" aria-labelledby="login-title">
+        <div class="login-copy">
+          <span class="eyebrow">ÁREA RESTRITA</span>
+          <h1 id="login-title">Gestão de excursões</h1>
+          <p>Entre para administrar destinos, reservas, cupons e resultados da Fui Lá.</p>
+        </div>
+        <form id="login-form" class="panel login-panel">
+          <label for="login-email">E-mail da equipe</label>
+          <input id="login-email" name="email" type="email" autocomplete="username" required />
+          <label for="login-password">Senha</label>
+          <input id="login-password" name="password" type="password" autocomplete="current-password" required />
+          <button class="button button-primary" type="submit">Entrar no painel</button>
+          <p id="login-message" class="form-message" role="alert"></p>
+          <small>O acesso é protegido e os dados dos compradores só aparecem depois do login.</small>
+        </form>
+      </section>
+
+      <section id="dashboard-view" class="dashboard-view" hidden>
+        <div class="dashboard-heading">
+          <div>
+            <span class="eyebrow">OPERAÇÃO DA AGÊNCIA</span>
+            <h1>Painel da equipe</h1>
+            <p>Excursões, reservas e pagamentos em um só lugar.</p>
+          </div>
+          <a class="button button-quiet" href="/">Ver site público</a>
+        </div>
+
+        <nav class="staff-tabs" aria-label="Seções do painel">
+          <button type="button" data-view="overview" class="active" aria-current="page">Visão geral</button>
+          <button type="button" data-view="excursions">Excursões</button>
+          <button type="button" data-view="coupons">Cupons</button>
+          <button type="button" data-view="buyers">Compradores</button>
+        </nav>
+
+        <div id="notice" class="notice" role="status" aria-live="polite"></div>
+
+        <section class="staff-page" data-page="overview">
+          <div class="section-heading">
+            <div><h2>Visão geral</h2><p>Visitas e pagamentos dos últimos 30 dias.</p></div>
+            <button type="button" class="button button-quiet" id="refresh-overview">Atualizar</button>
+          </div>
+          <div id="setup-status" class="setup-status" aria-live="polite"></div>
+          <div id="overview-metrics" class="metric-grid"></div>
+          <div class="chart-grid">
+            <article class="panel chart-panel">
+              <div class="chart-heading"><div><h3>Entradas no site</h3><p>Visualizações de página por dia</p></div><span class="chart-key visits-key">Visitas</span></div>
+              <div id="visitors-chart" class="chart-wrap"></div>
+            </article>
+            <article class="panel chart-panel">
+              <div class="chart-heading"><div><h3>Pagamentos confirmados</h3><p>Valor aprovado por dia</p></div><span class="chart-key payments-key">Receita</span></div>
+              <div id="payments-chart" class="chart-wrap"></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="staff-page" data-page="excursions" hidden>
+          <div class="section-heading">
+            <div><h2>Excursões</h2><p>Crie anúncios e acompanhe as vagas em tempo real.</p></div>
+            <button type="button" class="button button-quiet" id="refresh-excursions">Atualizar</button>
+          </div>
+          <div class="content-grid">
+            <form id="excursion-form" class="panel editor-panel" enctype="multipart/form-data">
+              <div class="panel-heading"><h3 id="excursion-form-title">Nova excursão</h3><p>As vagas são reservadas durante o checkout e confirmadas após o pagamento.</p></div>
+              <input type="hidden" name="id" id="excursion-id" />
+              <label for="excursion-title">Destino ou nome do pacote*</label>
+              <input id="excursion-title" name="title" maxlength="120" required />
+              <label for="excursion-description">Descrição</label>
+              <textarea id="excursion-description" name="description" maxlength="2000" rows="3"></textarea>
+              <div class="form-two">
+                <div><label for="excursion-date">Data da viagem*</label><input id="excursion-date" name="departureDate" type="date" required /></div>
+                <div><label for="excursion-price">Preço por pessoa (R$)*</label><input id="excursion-price" name="price" type="number" min="0.01" step="0.01" required /></div>
+              </div>
+              <div class="form-two">
+                <div><label for="excursion-age">Idade mínima*</label><input id="excursion-age" name="minAge" type="number" min="0" max="120" required /></div>
+                <div><label for="excursion-capacity">Número de vagas*</label><input id="excursion-capacity" name="capacity" type="number" min="1" max="10000" required /></div>
+              </div>
+              <label class="check-row">
+                <input id="installments-enabled" name="installmentsEnabled" type="checkbox" />
+                <span>Permitir parcelamento no cartão</span>
+              </label>
+              <div id="installment-field" hidden>
+                <label for="installments-count">Número máximo de parcelas</label>
+                <select id="installments-count" name="installmentsCount" disabled>
+                  <option value="2">2 vezes</option><option value="3">3 vezes</option><option value="4">4 vezes</option>
+                  <option value="5">5 vezes</option><option value="6">6 vezes</option><option value="7">7 vezes</option>
+                  <option value="8">8 vezes</option><option value="9">9 vezes</option><option value="10">10 vezes</option>
+                  <option value="11">11 vezes</option><option value="12" selected>12 vezes</option>
+                </select>
+              </div>
+              <label for="excursion-photo">Foto do anúncio<span id="photo-required">*</span></label>
+              <input id="excursion-photo" name="photo" type="file" accept="image/jpeg,image/png,image/webp" />
+              <small id="photo-hint">JPG, PNG ou WebP, até 5 MB.</small>
+              <img id="excursion-preview" class="photo-preview" alt="Prévia da foto da excursão" hidden />
+              <label class="check-row publish-row">
+                <input id="excursion-published" name="isPublished" type="checkbox" checked />
+                <span>Publicar no site assim que salvar</span>
+              </label>
+              <div class="form-actions">
+                <button type="submit" class="button button-primary" id="save-excursion">Salvar excursão</button>
+                <button type="reset" class="button button-quiet" id="cancel-excursion">Limpar</button>
+              </div>
+              <p class="form-message" id="excursion-message" role="status"></p>
+            </form>
+            <div id="excursion-list" class="record-list" aria-live="polite"></div>
+          </div>
+        </section>
+
+        <section class="staff-page" data-page="coupons" hidden>
+          <div class="section-heading">
+            <div><h2>Cupons</h2><p>Crie descontos por percentual ou valor fixo e limite o uso.</p></div>
+            <button type="button" class="button button-quiet" id="refresh-coupons">Atualizar</button>
+          </div>
+          <div class="content-grid coupon-layout">
+            <form id="coupon-form" class="panel editor-panel">
+              <div class="panel-heading"><h3>Novo cupom</h3><p>O desconto é calculado no servidor antes da cobrança.</p></div>
+              <label for="coupon-code">Código*</label>
+              <input id="coupon-code" name="code" maxlength="32" placeholder="EXCURSAO10" required />
+              <label for="coupon-type">Tipo de desconto*</label>
+              <select id="coupon-type" name="discountType">
+                <option value="percent">Percentual</option><option value="fixed">Valor em reais</option>
+              </select>
+              <label for="coupon-value">Desconto*</label>
+              <input id="coupon-value" name="discountValue" type="number" min="0.01" step="0.01" required />
+              <label for="coupon-max-uses">Limite de usos</label>
+              <input id="coupon-max-uses" name="maxUses" type="number" min="1" placeholder="Sem limite" />
+              <label for="coupon-expiry">Válido até</label>
+              <input id="coupon-expiry" name="expiresAt" type="date" />
+              <button type="submit" class="button button-primary">Criar cupom</button>
+              <p id="coupon-message" class="form-message" role="status"></p>
+            </form>
+            <div id="coupon-list" class="record-list" aria-live="polite"></div>
+          </div>
+        </section>
+
+        <section class="staff-page" data-page="buyers" hidden>
+          <div class="section-heading">
+            <div><h2>Compradores</h2><p>Dados pessoais aparecem somente para a equipe autenticada.</p></div>
+            <button type="button" class="button button-quiet" id="refresh-buyers">Atualizar</button>
+          </div>
+          <form id="buyer-search" class="buyer-search">
+            <label class="sr-only" for="buyer-query">Buscar por e-mail ou CPF</label>
+            <input id="buyer-query" name="q" placeholder="Buscar por e-mail ou CPF" autocomplete="off" />
+            <button type="submit" class="button button-primary">Buscar</button>
+            <button type="button" class="button button-quiet" id="clear-buyer-search">Limpar</button>
+          </form>
+          <div id="buyer-list" class="buyer-list"></div>
+          <div class="pagination">
+            <button type="button" class="button button-quiet" id="buyers-prev" disabled>Anterior</button>
+            <span id="buyers-page">Página 1</span>
+            <button type="button" class="button button-quiet" id="buyers-next" disabled>Próxima</button>
+          </div>
+        </section>
+      </section>
+    </main>
+    <div id="toast" class="staff-toast" role="status" aria-live="polite"></div>
+  </div>
+  <script src="/staff.js" defer></script>
+</body>
+</html>
